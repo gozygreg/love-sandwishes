@@ -1,3 +1,7 @@
+"""
+Module to import google speadsheet
+"""
+
 import gspread
 from google.oauth2.service_account import Credentials
 
@@ -38,8 +42,8 @@ def validate_data(values):
             raise ValueError(
                 f"Exactly 6 values required, you provided {len(values)}"
             )
-    except ValueError as e:
-        print(f"Invalid data: {e}, please try again.\n")
+    except ValueError as _e:
+        print(f"Invalid data: {_e}, please try again.\n")
 
 
 get_sales_data()
